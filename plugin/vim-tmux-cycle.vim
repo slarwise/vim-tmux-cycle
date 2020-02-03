@@ -1,4 +1,4 @@
-" Utility functions for working with tmux
+" Cycle between vim windows and tmux panes with the same keybindings.
 
 if exists("g:loaded_vim_tmux_cycle") || !exists("$TMUX")
     finish
