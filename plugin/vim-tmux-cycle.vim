@@ -3,7 +3,7 @@
 if exists("g:loaded_vim_tmux_cycle") || !exists("$TMUX")
     finish
 endif
-let g:loaded_tmux = 1
+let g:loaded_vim_tmux_cycle = 1
 
 command VimTmuxCycleNext :call VimTmuxCycleNext()
 command VimTmuxCyclePrevious :call VimTmuxCyclePrevious()
