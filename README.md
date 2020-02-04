@@ -22,6 +22,14 @@ call plug#end()
 
 Place the vim-tmux-cycle shell script somewhere in your `PATH`.
 
+Add the following lines to your .tmux.conf:
+
+```
+
+bind-key -n C-j run-shell "vim-tmux-cycle +"
+bind-key -n C-k run-shell "vim-tmux-cycle -"
+```
+
 ## Usage
 
 Add the following mappings to your vimrc:
