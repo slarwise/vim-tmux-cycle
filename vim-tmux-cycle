@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Traverse vim splits and tmux panes with the same commands, `C-j` for next and
+# `C-k` for previous.
+
+set -e
+
+cmd="$(tmux display-message -p '#{pane_current_command}')"
+
+if [ "$cmd" = "vim" ] || [ "$cmd" = "nvim" ]; then
+    direction="$(echo $1 | tr '+-' 'jk')"
+    tmux send-keys C-$direction
+else
+    tmux select-pane -t $1
+    cmd_new_pane="$(tmux display-message -p '#{pane_current_command}')"
+    if [ "$cmd_new_pane" = "vim" ] || [ "$cmd_new_pane" = "nvim" ]; then
+        win_cmd="$(echo $1 | tr '+-' 'tb')"
+        tmux send-keys C-w $win_cmd
+    fi
+fi
