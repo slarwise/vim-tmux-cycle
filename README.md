@@ -43,4 +43,4 @@ Now you can go to the next tmux pane/vim split with ctrl+j and the previous with
 ctrl+k, independently if you are in vim/neovim or in another tmux pane.
 
 The mappings are hardcoded in the shell script so if you want other mappings you
-need to change them there as well.
+need to change them there and in your .tmux.conf.
