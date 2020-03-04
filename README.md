@@ -1,7 +1,7 @@
 # Vim-tmux-cycle
 
-Cycle between vim windows and tmux panes with the same keybindings. Basically
-copied from
+Cycle between vim windows and tmux panes with the same keybindings. Concept
+taken from
 [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), the
 only difference is that with this plugin you cycle between panes/splits instead
 of going left/right/up/down. I wrote this since I usually only use two or three
